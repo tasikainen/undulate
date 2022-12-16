@@ -1,0 +1,19 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTi...
+    server: https://xxx.hcp.westeurope.azmk8s.io:443
+  name: testCluster
+contexts:
+- context:
+    cluster: testCluster
+    namespace: default
+    user: cc5-default-xxx
+  name: cc5-default-xxx
+current-context: cc5-default-xxx
+kind: Config
+preferences: {}
+users:
+- name: cc5-default-testCluster
+  user:
+    token: eyJhbG...

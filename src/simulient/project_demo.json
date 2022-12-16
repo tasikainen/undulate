@@ -1,0 +1,311 @@
+{
+  "output": "stdout",
+  "delay": 0.1,
+  "total_time": 20,
+  "initial_time": "2020-08-17 18.23.00",
+  "time_format": "%Y-%m-%d %H.%M.%S.%f",
+  "groups": {
+      "group5": {
+          "initial_state": "normal",
+          "variables": {
+              "list": ["visits", "average_delay"],
+              "identifier_index_map": {"visits": 0, "average_delay": 0},
+              "initial_values": [0, 0],
+              "coefficients": [
+                  [],
+                  []
+              ],
+              "coefficient_distributions":[
+                  []
+              ],
+              "formulas": ["</var.visits.value> + 1", "(</var.visits.value> * </var.average_delay.value> + </state.delay>)/(</var.visits.value> + 1)"]
+          },
+          "states": {
+              "normal": {
+                  "action_weight_formulas": {
+                      "send": {
+                          "for_all_in": "",
+                          "coefficients": [],
+                          "coefficient_distributions": [],
+                          "formula": "1"
+                      }
+                  },
+                  "time_delay_formula": {
+                      "coefficients": [],
+                      "coefficient_distributions": [],
+                      "formula": "1 + abs(</state.parameter> - 5.5) * normal(1, 0.1)"
+                  },
+                  "state_transition_weight_formulas": {
+                      "normal": {
+                          "coefficients": [],
+                          "coefficient_distributions": [],
+                          "formula": "1"
+                      }
+                  }
+              }
+          }
+      },
+      "group3": {
+        "initial_state": "start",
+        "variables": {
+            "list": ["visits", "average_delay"],
+            "identifier_index_map": {"visits": 0, "average_delay": 0},
+            "initial_values": [0, 0],
+            "coefficients": [
+                [],
+                []
+            ],
+            "coefficient_distributions":[
+                []
+            ],
+            "formulas": ["</var.visits.value> + 1", "(</var.visits.value> * </var.average_delay.value> + </state.delay>)/(</var.visits.value> + 1)"]
+        },
+        "states": {
+            "normal": {
+                "action_weight_formulas": {
+                    "send": {
+                        "for_all_in": "",
+                        "coefficients": [],
+                        "coefficient_distributions": [],
+                        "formula": "1"
+                    }
+                },
+                "time_delay_formula": {
+                    "coefficients": [],
+                    "coefficient_distributions": [],
+                    "formula": "1 + abs(5.5 - </state.parameter>)"
+                },
+                "state_transition_weight_formulas": {
+                    "normal": {
+                        "coefficients": [],
+                        "coefficient_distributions": [],
+                        "formula": "1"
+                    }
+                }
+            },
+            "start": {
+              "action_weight_formulas": {
+                  "group3_start": {
+                      "for_all_in": "",
+                      "coefficients": [],
+                      "coefficient_distributions": [],
+                      "formula": "1"
+                  }
+              },
+              "time_delay_formula": {
+                  "coefficients": [],
+                  "coefficient_distributions": [],
+                  "formula": "1 + abs(5.5 - </state.parameter>)"
+              },
+              "state_transition_weight_formulas": {
+                  "normal": {
+                      "coefficients": [],
+                      "coefficient_distributions": [],
+                      "formula": "1"
+                  }
+              }
+          }
+        }
+    },
+    "group4": {
+      "initial_state": "start",
+      "variables": {
+          "list": ["visits", "average_delay"],
+          "identifier_index_map": {"visits": 0, "average_delay": 0},
+          "initial_values": [0, 0],
+          "coefficients": [
+              [],
+              []
+          ],
+          "coefficient_distributions":[
+              []
+          ],
+          "formulas": ["</var.visits.value> + 1", "(</var.visits.value> * </var.average_delay.value> + </state.delay>)/(</var.visits.value> + 1)"]
+      },
+      "states": {
+          "normal": {
+              "action_weight_formulas": {
+                  "send": {
+                      "for_all_in": "",
+                      "coefficients": [],
+                      "coefficient_distributions": [],
+                      "formula": "1"
+                  }
+              },
+              "time_delay_formula": {
+                  "coefficients": [],
+                  "coefficient_distributions": [],
+                  "formula": "1 + abs(5.5 - </state.parameter>)"
+              },
+              "state_transition_weight_formulas": {
+                  "normal": {
+                      "coefficients": [],
+                      "coefficient_distributions": [],
+                      "formula": "1"
+                  }
+              }
+          },
+          "start": {
+            "action_weight_formulas": {
+                "group4_start": {
+                    "for_all_in": "",
+                    "coefficients": [],
+                    "coefficient_distributions": [],
+                    "formula": "1"
+                }
+            },
+            "time_delay_formula": {
+                "coefficients": [],
+                "coefficient_distributions": [],
+                "formula": "1 + abs(5.5 - </state.parameter>)"
+            },
+            "state_transition_weight_formulas": {
+                "normal": {
+                    "coefficients": [],
+                    "coefficient_distributions": [],
+                    "formula": "1"
+                }
+            }
+        }
+      }
+    },
+    "group6": {
+      "initial_state": "start",
+      "variables": {
+          "list": ["visits", "average_delay"],
+          "identifier_index_map": {"visits": 0, "average_delay": 0},
+          "initial_values": [0, 0],
+          "coefficients": [
+              [],
+              []
+          ],
+          "coefficient_distributions":[
+              []
+          ],
+          "formulas": ["</var.visits.value> + 1", "(</var.visits.value> * </var.average_delay.value> + </state.delay>)/(</var.visits.value> + 1)"]
+      },
+      "states": {
+          "normal": {
+              "action_weight_formulas": {
+                  "send": {
+                      "for_all_in": "",
+                      "coefficients": [],
+                      "coefficient_distributions": [],
+                      "formula": "1"
+                  }
+              },
+              "time_delay_formula": {
+                  "coefficients": [],
+                  "coefficient_distributions": [],
+                  "formula": "1 + abs(5.5 - </state.parameter>)"
+              },
+              "state_transition_weight_formulas": {
+                  "normal": {
+                      "coefficients": [],
+                      "coefficient_distributions": [],
+                      "formula": "1"
+                  }
+              }
+          },
+          "start": {
+            "action_weight_formulas": {
+                "group6_start": {
+                    "for_all_in": "",
+                    "coefficients": [],
+                    "coefficient_distributions": [],
+                    "formula": "1"
+                }
+            },
+            "time_delay_formula": {
+                "coefficients": [],
+                "coefficient_distributions": [],
+                "formula": "1 + abs(5.5 - </state.parameter>)"
+            },
+            "state_transition_weight_formulas": {
+                "normal": {
+                    "coefficients": [],
+                    "coefficient_distributions": [],
+                    "formula": "1"
+                }
+            }
+        }
+      }
+    }
+  },
+  "users": [
+    {
+      "group": "group5",
+      "number_of_users": 2
+    },
+    {
+        "group": "group3",
+        "number_of_users": 2
+    },
+    {
+        "group": "group4",
+        "number_of_users": 2
+    },
+    {
+        "group": "group6",
+        "number_of_users": 2
+    }
+  ],
+  "actions": {
+    "send": {
+      "pattern": "return session.get('http://20.50.188.215/simulient')",
+      "response_parsing": [
+        {
+          "identifier": "parameter",
+          "jsonpath_expression": "['parameter']"
+        }
+      ],
+      "timeout": 2,
+      "timeout_formula": {
+        "coefficients": [],
+        "formula": "0"
+      }
+    },
+    "group3_start": {
+      "pattern": "session.cookies.set_cookie(requests.cookies.create_cookie(name='test-group', value='group3'));return session.get('http://20.50.188.215/simulient')",
+      "response_parsing": [
+        {
+          "identifier": "parameter",
+          "jsonpath_expression": "['parameter']"
+        }
+      ],
+      "timeout": 2,
+      "timeout_formula": {
+        "coefficients": [],
+        "formula": "0"
+      }
+    },
+    "group4_start": {
+      "pattern": "session.cookies.set_cookie(requests.cookies.create_cookie(name='test-group', value='group4'));return session.get('http://20.50.188.215/simulient')",
+      "response_parsing": [
+        {
+          "identifier": "parameter",
+          "jsonpath_expression": "['parameter']"
+        }
+      ],
+      "timeout": 2,
+      "timeout_formula": {
+        "coefficients": [],
+        "formula": "0"
+      }
+    },
+    "group6_start": {
+      "pattern": "session.cookies.set_cookie(requests.cookies.create_cookie(name='test-group', value='group6'));return session.get('http://20.50.188.215/simulient')",
+      "response_parsing": [
+        {
+          "identifier": "parameter",
+          "jsonpath_expression": "['parameter']"
+        }
+      ],
+      "timeout": 2,
+      "timeout_formula": {
+        "coefficients": [],
+        "formula": "0"
+      }
+    }
+  }
+}
